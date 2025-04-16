@@ -1,0 +1,510 @@
+/* Genel Sayfa Stili */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Arka Planı */
+body {
+    background: #f4f4f4;
+    /* Gri arka plan rengi */
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* ÜST NAVBAR (Koyu Tema & Sarı Vurgu) */
+.top-navbar {
+    background-color: #1a1a1a;
+    padding: 20px 0;
+    font-size: 15px;
+    position: relative;
+    z-index: 10;
+    border-bottom: 2px solid #ffcc00;
+
+  }
+  
+  .top-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  /* Sol: Kategoriler Butonu */
+  .top-left button {
+    background: #ffcc00;
+    color: #1a1a1a;
+    border: none;
+    padding: 8px 15px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .top-left button:hover {
+    background: #e6b800;
+  }
+  
+  /* Orta bağlantılar */
+  .top-center {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .top-center a {
+    text-decoration: none;
+    color: #ccc;
+    font-weight: bold;
+    transition: color 0.3s;
+  }
+  
+  .top-center a:hover {
+    color: #ffcc00;
+  }
+  
+  /* Sağdaki arama kutusu */
+  .top-right input {
+    padding: 8px 12px;
+    border: 1px solid #444;
+    border-radius: 20px;
+    font-size: 14px;
+    width: 200px;
+    background-color: #333;
+    color: white;
+  }
+  
+  .top-right input::placeholder {
+    color: #aaa;
+  }
+  
+
+/* SIDEBAR */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px; /* gizli halde başlar */
+    width: 250px;
+    height: 100%;
+    background: #333; /* Koyu renkli modern arka plan */
+    color: #fff; /* Yazı rengi beyaz */
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
+    padding: 30px 20px;
+    transition: left 0.3s ease;
+    z-index: 1001;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Sidebar açıldığında görünür */
+.sidebar.open {
+    left: 0;
+}
+
+/* Kapatma butonu */
+.sidebar .close-btn {
+    font-size: 28px;
+    cursor: pointer;
+    color: #fff;
+    float: right;
+    margin-top: -10px;
+}
+
+/* Başlık */
+.sidebar h3 {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #fff;
+}
+
+/* Kategoriler listesi */
+.sidebar ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+/* Liste elemanları */
+.sidebar ul li {
+    margin: 15px 0;
+    border-bottom: 1px solid #555; /* Alt çizgi ekledik */
+}
+
+/* Linkler */
+.sidebar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s;
+    display: block;
+    padding: 8px 0;
+}
+
+/* Link hover efekti */
+.sidebar ul li a:hover {
+    color: #ffcc00; /* Hoverda sarı renk */
+    padding-left: 10px; /* Hoverda soldan boşluk ekledik */
+}
+
+/* Footer kısmı */
+.sidebar-footer {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    font-size: 13px;
+    color: #bbb;
+}
+
+/* Daha fazla kategori eklemek için sidebar'ı genişletebiliriz */
+.sidebar ul li:nth-child(6),
+.sidebar ul li:nth-child(7),
+.sidebar ul li:nth-child(8) {
+    font-size: 14px;
+    font-weight: normal;
+}
+
+/* Mobil uyumlu */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+    }
+
+    .sidebar ul li {
+        margin: 10px 0;
+    }
+}
+
+
+/* OVERLAY */
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    display: none;
+    z-index: 1000;
+}
+
+/* ANA NAVBAR */
+.main-navbar {
+    background-color: #1a1a1a;
+    padding: 20px 0;
+    margin-bottom: 20px;
+}
+
+.nav-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    color: white;
+    font-size: 24px;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-menu li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-menu li a:hover {
+    color: #ffcc00;
+}
+
+main {
+    margin: 40px 0;
+}
+
+/* Ana haber bloğu düzeni */
+.main-news {
+    background: #fff; /* Beyaz arka plan */
+    padding: 20px;
+    margin-bottom: 40px;
+    border-radius: 8px; /* Köşeleri daha yuvarlak yapmak için */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Daha yumuşak ve belirgin gölge */
+    position: relative; /* İç öğeleri konumlandırmak için */
+    overflow: hidden; /* Gölgeyi ve içerik taşmasını engeller */
+    transition: transform 0.3s ease-in-out; /* Hover efekti için animasyon */
+}
+
+/* Ana haber bloğundaki resim düzeni */
+.main-news img {
+    width: 100%; /* Resmin genişliğini tamamen konteynerle uyumlu */
+    height: 350px; /* Yükseklik sabitlenmiş şekilde genişliği koruyarak görünümün bozulması engellenir */
+    object-fit: cover; /* Resmi düzgün bir şekilde kırpar */
+    border-radius: 8px; /* Yuvarlak köşeler */
+    transition: transform 0.3s ease-in-out; /* Hover durumunda efekt ekler */
+}
+
+/* Hover durumunda ana haber bloğunun hareket etmesi */
+.main-news:hover {
+    transform: translateY(-10px); /* Hover'da hafifçe yukarıya kayar */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Gölge daha belirgin hale gelir */
+}
+
+/* Hover durumunda resmin büyümesi */
+.main-news:hover img {
+    transform: scale(1.05); /* Resim hover durumunda biraz büyür */
+}
+
+/* Ana haber başlığı düzeni */
+.main-news h2 {
+    margin-top: 15px; /* Resim ile başlık arasına boşluk bırakılır */
+    font-size: 22px; /* Başlık boyutu */
+    font-weight: bold;
+    color: #333; /* Başlık rengi */
+    line-height: 1.4;
+    transition: color 0.3s ease; /* Başlık hover efekti */
+}
+
+/* Ana haber başlığı hover durumunda renk değişimi */
+.main-news:hover h2 {
+    color: #007BFF; /* Hover durumunda başlık rengi değişir */
+}
+
+/* Ana haber açıklama düzeni */
+.main-news p {
+    font-size: 16px;
+    color: #555; /* Açıklama rengi */
+    line-height: 1.6; /* Satır yüksekliğini artırarak okunabilirliği arttırır */
+    margin-top: 10px;
+}
+
+/* Okumaya devam butonunu ekleyelim */
+.main-news .read-more {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 15px;
+    background-color: #007BFF; /* Mavi arka plan */
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease; /* Buton hover animasyonu */
+}
+
+/* Okumaya devam butonunun hover durumu */
+.main-news .read-more:hover {
+    background-color: #0056b3; /* Buton hover durumunda renk değişir */
+}
+
+
+/* Kategorilerin düzenini koruyoruz */
+/* Kategoriler için genel düzen */
+.categories {
+    display: flex;
+    gap: 20px; /* Kategoriler arasında boşluk */
+    flex-wrap: wrap; /* Kategoriler alt satıra geçsin */
+    justify-content: space-between; /* Kategorilerin düzgün yerleşimi için */
+}
+
+/* Her bir makale (article) için stil */
+.categories article {
+    flex: 1;
+    min-width: 280px; /* En küçük genişlik */
+    background: white;
+    padding: 15px;
+    border-radius: 8px; /* Köşe yuvarlama */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Daha belirgin gölge efekti */
+    text-align: center; /* Yazıları ortalamak */
+    position: relative;
+    overflow: hidden; /* Resmin taşmasını engellemek */
+    transition: transform 0.3s ease-in-out; /* Hover efektinde animasyon ekleyelim */
+}
+
+/* Resimlerin düzenlenmesi */
+.categories article img {
+    width: 100%; /* Resmin genişliği konteyner genişliğine göre ayarlanır */
+    height: 200px; /* Sabit yükseklik */
+    object-fit: cover; /* Resmin kırpılmasını sağlar ve orantılı kalır */
+    border-radius: 5px;
+    opacity: 0.7; /* Başlangıçta resmin saydamlığı */
+    transition: opacity 0.3s ease-in-out; /* Saydamlık geçişi */
+}
+
+/* Hover durumunda resmin saydamlık ve büyüme efekti */
+.categories article:hover img {
+    opacity: 1; /* Hover durumunda resmin tamamen görünmesini sağlarız */
+}
+
+/* Hover durumunda artikelin büyümesi */
+.categories article:hover {
+    transform: translateY(-10px); /* Hover durumunda makale biraz yükselir */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Hover'da daha belirgin gölge */
+}
+
+/* Yazı ve açıklama düzeni */
+.categories article h3 {
+    margin-top: 15px; /* Resim ile başlık arasına boşluk */
+    font-size: 18px;
+    font-weight: bold;
+    color: #333; /* Başlık rengi */
+    transition: color 0.3s ease; /* Hover durumunda renk değişimi */
+}
+
+/* Hover durumunda başlık renginin değişmesi */
+.categories article:hover h3 {
+    color: #007BFF; /* Hover durumunda başlık maviye döner */
+}
+
+.categories article p {
+    margin-top: 10px; /* Başlık ile açıklama arasına boşluk */
+    font-size: 14px;
+    color: #555; /* Açıklama rengi */
+    line-height: 1.6; /* Satır yüksekliğini artırarak açıklamanın daha rahat okunmasını sağlarız */
+}
+
+/* Hover durumunda açıklama renginin değişmesi */
+.categories article:hover p {
+    color: #555; /* Hover'da renk değişmiyor ama başlık daha belirgin hale gelir */
+}
+
+  
+
+
+/* Footer */
+/* Footer genel stil */
+footer {
+    background: #2c2c2c; /* Daha koyu bir arka plan */
+    color: #f1f1f1;
+    padding: 40px 0 20px;
+    margin-top: 60px;
+    border-top: 4px solid #ffcc00; /* Üstten ayırıcı çizgi */
+  }
+  
+  /* Footer içeriği düzeni */
+  .footer-flex {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    width: 100%;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #444; /* Alt çizgi ile bölünmüş görünüm */
+  }
+  
+  /* Her bölüm ayrı kutu gibi */
+  .footer-section {
+    flex: 1;
+    min-width: 250px;
+    max-width: 300px;
+    text-align: left;
+  }
+  
+  .footer-section h4 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #ffcc00;
+  }
+  
+  .footer-section a {
+    color: #ccc;
+    text-decoration: none;
+  }
+  
+  .footer-section a:hover {
+    color: #ffffff;
+  }
+  
+  /* Alt bilgi */
+  .footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 14px;
+    color: #bbb;
+    padding-top: 15px;
+  }
+  
+
+/* Footer'ın üst kısmı ile içerik arasına çizgi eklemek */
+.footer {
+    border-top: 5px solid #ffcc00;
+    /* Bunu ekledim: Footer ile üst içeriği ayıran çizgi */
+}
+
+/* Footer'ı her zaman sayfanın altına sabitlemek için */
+body,
+html {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: #d4d4d4	;
+}
+
+main {
+    flex: 1;
+    /* Ana içerik alana esneklik vererek footer'ın altta kalmasını sağlıyoruz */
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+
+    .top-flex,
+    .nav-flex {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        width: 100%;
+        padding-top: 10px;
+    }
+
+    .nav-menu li {
+        margin-bottom: 10px;
+    }
+
+    .top-right input {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .top-center {
+        margin: 10px 0;
+    }
+
+    .footer-flex {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .footer-bottom {
+        margin-top: 20px;
+    }
+
+    .top-left {
+        margin-bottom: 10px;
+    }
+
+    .categories {
+        display: block;
+    }
+
+    .categories article {
+        margin-bottom: 20px;
+    }
+}

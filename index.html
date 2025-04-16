@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HaberManşet</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- ÜST NAVBAR -->
+    <div class="top-navbar">
+        <div class="container top-flex">
+
+            <!-- Sol: Kategoriler Butonu -->
+            <div class="top-left">
+                <button id="sidebarToggle">☰ Kategoriler</button>
+            </div>
+
+            <!-- Ortada bağlantılar -->
+            <div class="top-center">
+                <a href="#">Ana Sayfa</a>
+                <a href="#">Hakkımızda</a>
+                <a href="#">Hizmetler</a>
+                <a href="#">Ürünler</a>
+                <a href="#">İletişim</a>
+                <a href="#">Blog</a>
+                <a href="#">Galeri</a>
+                <a href="#">SSS</a>
+                <a href="#">Giriş Yap</a>
+                <a href="#">Kayıt Ol</a>
+            </div>
+
+            <!-- Sağda arama kutusu -->
+            <div class="top-right">
+                <input type="text" placeholder="Haber Ara...">
+            </div>
+
+        </div>
+    </div>
+
+    <!-- SIDEBAR -->
+    <div id="sidebar" class="sidebar">
+        <div class="sidebar-content">
+            <span id="closeSidebar" class="close-btn">&times;</span>
+            <h3>Kategoriler</h3>
+            <ul>
+                <li><a href="#">Gündem</a></li>
+                <li><a href="#">Spor</a></li>
+                <li><a href="#">Ekonomi</a></li>
+                <li><a href="#">Teknoloji</a></li>
+                <li><a href="#">Sağlık</a></li>
+                <li><a href="#">Magazin</a></li>
+                <li><a href="#">Kültür & Sanat</a></li>
+                <li><a href="#">Dünya</a></li>
+                <li><a href="#">Politika</a></li>
+                <li><a href="#">Eğitim</a></li>
+            </ul>
+        </div>
+        <div class="sidebar-footer">
+            <p>&copy; 2025 HaberManşet</p>
+        </div>
+    </div>
+    
+
+    <!-- ARKA PLAN (KARARTI) -->
+    <div id="overlay"></div>
+
+    <!-- ANA NAVBAR -->
+    <header class="main-navbar">
+        <div class="container nav-flex">
+            <h1 class="logo">HaberManşet</h1>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="#">Son Dakika</a></li>
+                    <li><a href="#">Gündem</a></li>
+                    <li><a href="#">Spor</a></li>
+                    <li><a href="#">Ekonomi</a></li>
+                    <li><a href="#">Teknoloji</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="main-news"> 
+            <img src="resimler/son-dakika.jpg" alt="Manşet Haber">
+            <h2>Manşet: Ekonomi Zirvesi Gündemde!</h2>
+            <p>Bugün gerçekleşen ekonomi zirvesinde önemli kararlar alındı. İşte detaylar...</p>
+        </section>
+
+        <section class="categories">
+            <article>
+                <img src="resimler/gundem.jpg" alt="Gündem">
+                <h3>Gündem</h3>
+                <p>Son dakika gelişmeleri ve Türkiye gündeminden haberler.</p>
+            </article>
+            <article>
+                <img src="resimler/spor.jpg" alt="Spor">
+                <h3>Spor</h3>
+                <p>Futbol, basketbol ve diğer spor dallarındaki en güncel gelişmeler.</p>
+            </article>
+            <article>
+                <img src="resimler/teknoloji.jpg" alt="Teknoloji">
+                <h3>Teknoloji</h3>
+                <p>Yenilikler, ürün tanıtımları ve teknoloji dünyasından haberler.</p>
+            </article>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-flex">
+            <div class="footer-section">
+                <h4>Hakkımızda</h4>
+                <p>HaberManşet, tarafsız ve güncel haberleri sizlerle buluşturur. Türkiye'nin her köşesinden haber
+                    burada.</p>
+            </div>
+            <div class="footer-section">
+                <h4>İletişim</h4>
+                <p>Email: info@habermanset.com</p>
+                <p>Telefon: +90 212 000 00 00</p>
+            </div>
+            <div class="footer-section">
+                <h4>Bizi Takip Edin</h4>
+                <p>
+                    <a href="#">Facebook</a> |
+                    <a href="#">Twitter</a> |
+                    <a href="#">Instagram</a>
+                </p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 HaberManşet - Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+
+
+
+
+
+
+    <script>
+        const sidebar = document.getElementById('sidebar');
+        const toggleBtn = document.getElementById('sidebarToggle');
+        const closeBtn = document.getElementById('closeSidebar');
+        const overlay = document.getElementById('overlay');
+
+        toggleBtn.addEventListener('click', () => {
+            sidebar.classList.add('open');
+            overlay.style.display = 'block';
+        });
+
+        closeBtn.addEventListener('click', () => {
+            sidebar.classList.remove('open');
+            overlay.style.display = 'none';
+        });
+
+        overlay.addEventListener('click', () => {
+            sidebar.classList.remove('open');
+            overlay.style.display = 'none';
+        });
+    </script>
+
+</body>
+
+</html>
