@@ -1,0 +1,112 @@
+
+
+    /* Genel Stiller */
+    body {
+        background-color: #f8f9fa;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+    
+    .main-content {
+        flex: 1;
+    }
+    
+    /* Navbar Stilleri */
+    .navbar-custom {
+        background-color: #415e7e;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    
+    .navbar-custom .navbar-brand,
+    .navbar-custom .nav-link {
+        color: white;
+    }
+    
+    .navbar-custom .nav-link:hover {
+        color: rgba(255, 255, 255, 0.8);
+    }
+    
+    /* Auth Container Stilleri */
+    .auth-container {
+        max-width: 500px;
+        margin: 30px auto;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        background-color: #fff;
+    }
+    
+    .auth-header {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    
+    .auth-header h2 {
+        color: #333;
+    }
+    
+    /* Footer Stilleri */
+    .footer-custom {
+        background-color: #415e7e;
+        color: white;
+        padding: 20px 0;
+        margin-top: 30px;
+    }
+    
+    .footer-custom a {
+        color: #adb5bd;
+        text-decoration: none;
+    }
+    
+    .footer-custom a:hover {
+        color: white;
+        text-decoration: underline;
+    }
+    
+    /* Form Stilleri */
+    .form-control:focus {
+        border-color: #80bdff;
+        box-shadow: 0 0 0 0.25rem rgba(0, 123, 255, 0.25);
+    }
+    
+    .btn-primary {
+        background-color: #415e7e;
+        border: none;
+        width: 100%;
+        padding: 10px;
+        font-weight: 600;
+    }
+    
+    .btn-primary:hover {
+        background-color: #415e7e;
+    }
+    
+    .auth-link {
+        text-align: center;
+        margin-top: 20px;
+    }
+    
+    .auth-link a {
+        color: #415e7e;
+        text-decoration: none;
+    }
+    
+    .auth-link a:hover {
+        text-decoration: underline;
+    }
+    
+    .forgot-password {
+        text-align: right;
+        margin-bottom: 15px;
+    }
+    
+    .forgot-password a {
+        color: #6c757d;
+        text-decoration: none;
+        font-size: 0.9rem;
+    }
+    
+    .forgot-password a:hover {
+        text-decoration: underline;
+    }
