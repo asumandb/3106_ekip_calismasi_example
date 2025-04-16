@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog Sayfası</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #ffffff; /* Beyaz Arka Plan */
+      font-family: Arial, sans-serif;
+      color: #34495e; /* Koyu Gri */
+    }
+
+    .navbar {
+      background-color: #212529; /* Koyu Gri */
+    }
+
+    .navbar-nav .nav-link {
+      color: #f1c6d8 !important; /* Açık Pembe */
+    }
+
+    .navbar-nav .nav-link.active {
+      color: #ff6f61 !important; /* Beyaz-Turuncu */
+    }
+
+    .blog-card {
+      background-color: #f7f7f7; /* Açık Gri */
+      border: 1px solid #dcdcdc; /* Açık Gri Kenarlar */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 1.5rem;
+      border-radius: 15px;
+      margin-bottom: 2rem; /* Kartlar arasındaki boşluk */
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+
+    .blog-card:hover {
+      transform: scale(1.03);
+      background-color: #bdc3c7; /* Gri-Mavi tonları */
+    }
+
+    .card-title {
+      font-weight: bold;
+      color: #34495e; /* Koyu Gri */
+    }
+
+    .card-text {
+      color: #34495e; /* Koyu Gri */
+    }
+
+    .comment-list li {
+      background-color: #fbf5f5; /* Çok Açık Pembe */
+      padding: 8px;
+      margin-bottom: 5px;
+      border-radius: 5px;
+    }
+
+    .input-group input {
+      border-radius: 5px;
+    }
+
+    .btn-outline-primary {
+      background-color: #ff6f61; /* Beyaz-Turuncu */
+      color: white;
+    }
+
+    .btn-outline-primary:hover {
+      background-color: #e74c3c; /* Koyu Turuncu */
+    }
+
+    footer {
+      background-color: #212529; /* Koyu Gri */
+      color: white;
+      padding: 2rem 0;
+      margin-top: 4rem;
+    }
+
+    .blog-card .card-body {
+      flex-grow: 1;
+    }
+
+    .row .col-md-6 {
+      margin-bottom: 1.5rem; /* Kartlar arasındaki dikey boşluk */
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">Blog Sitesi</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#">Ana Sayfa</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Hakkımızda</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Hizmetler</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Ürünler</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">SSS</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">İletişim</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Kayıt Ol</a></li>
+          <li class="nav-item"><a class="nav-link active" href="#">Blog </a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Galeri </a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Blog Kartları -->
+  <div class="container py-5">
+    <h2 class="text-center mb-4">Güncel Blog Yazılarımız</h2>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="blog-card">
+          <h5 class="card-title">1. Web Tasarımına Giriş</h5>
+          <p class="card-text">HTML, CSS ve JavaScript gibi temel web teknolojileri kullanarak, her türdeki kullanıcı için estetik ve fonksiyonel web siteleri oluşturmak mümkündür. Bu yazımızda, web tasarımının temellerini öğreneceğiz...</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="blog-card">
+          <h5 class="card-title">2. JavaScript ile Dinamik Sayfalar</h5>
+          <p class="card-text">JavaScript, web sayfalarını dinamik hale getiren, etkileşimli özellikler ekleyen bir programlama dilidir. Web uygulamalarını nasıl daha etkileşimli hale getirebileceğinizi bu yazıda keşfedeceksiniz...</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="blog-card">
+          <h5 class="card-title">3. Bootstrap Kullanımı</h5>
+          <p class="card-text">Bootstrap, responsive yani mobil uyumlu web siteleri ve uygulamaları hızla geliştirmenize yardımcı olan bir açık kaynaklı CSS çerçevesidir. Bu yazımızda Bootstrap'ın sunduğu özellikleri inceleyeceğiz...</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="blog-card">
+          <h5 class="card-title">4. Mobil Uyumlu Siteler</h5>
+          <p class="card-text">Mobil uyumlu (responsive) tasarımlar, her türdeki cihazda kullanıcı dostu bir deneyim sunar. Bu yazıda, responsive tasarımın temellerini öğrenip mobil uyumlu siteler geliştirmeyi keşfedeceksiniz...</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="blog-card">
+          <h5 class="card-title">5. SEO Nedir?</h5>
+          <p class="card-text">SEO (Arama Motoru Optimizasyonu), web sitenizin arama motorlarında daha görünür hale gelmesini sağlamak için yapılan çeşitli çalışmalardır. Bu yazımızda SEO'nun temel ilkelerinden bahsedeceğiz...</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="blog-card">
+          <h5 class="card-title">6. HTML Temelleri</h5>
+          <p class="card-text">HTML, web sayfalarının iskeletini oluşturan bir işaretleme dilidir. HTML'in temel yapı taşlarını öğrenerek etkili ve erişilebilir web sayfaları oluşturabilirsiniz...</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="blog-card">
+          <h5 class="card-title">7. CSS ile Stil Verme</h5>
+          <p class="card-text">CSS (Cascading Style Sheets), web sayfalarına stil vermek için kullanılır. Bu yazıda, CSS ile renk, yazı tipi, boşluklar ve hizalama gibi temel görsel düzenlemeleri öğreneceksiniz...</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="blog-card">
+          <h5 class="card-title">8. React ile Geliştirme</h5>
+          <p class="card-text">React, Facebook tarafından geliştirilen ve modern web uygulamaları geliştirmeyi kolaylaştıran bir JavaScript kütüphanesidir. React ile bileşen tabanlı gelişim süreçlerine göz atacağız...</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="blog-card">
+          <h5 class="card-title">9. Formlar ve UX</h5>
+          <p class="card-text">Kullanıcı dostu formlar, kullanıcıların bir web sitesinde rahatça işlem yapabilmesi için gereklidir. Bu yazımızda formların tasarımını ve kullanıcı deneyimini ele alacağız...</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="blog-card">
+          <h5 class="card-title">10. UX/UI Tasarımı</h5>
+          <p class="card-text">UX (User Experience) ve UI (User Interface) tasarımı, bir web sitesinin başarısı için kritik öneme sahiptir. Bu yazımızda, her iki tasarımın nasıl birleştiğinden bahsedeceğiz...</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="blog-card">
+          <h5 class="card-title">11. Performans Optimizasyonu</h5>
+          <p class="card-text">Bir web sitesinin hızı, kullanıcı deneyimini doğrudan etkiler. Performans optimizasyonu, web sayfanızın hızını artırmak için çeşitli yöntemler içerir...</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="blog-card">
+          <h5 class="card-title">12. Hosting & Domain</h5>
+          <p class="card-text">Bir web sitesi için doğru hosting ve domain seçimi çok önemlidir. Bu yazıda, en iyi hosting hizmetlerini ve alan adı seçiminde dikkat edilmesi gereken noktaları inceleyeceğiz...</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="text-center">
+    <div class="container">
+      <p>&copy; 2025 Blog Sitesi. Tüm hakları saklıdır.</p>
+      <p>Designed by Asuman</p>
+    </div>
+  </footer>
+
+</body>
+</html>
